@@ -56,15 +56,14 @@
 					</tr>
 				</thead>
 				<tbody>
-					<!-- Create a table row for each person in your data object -->						
+					<!-- Create a table row for each person in your data object -->						<tr ng-repeat= "person in data | orderBy : sortType | filter : search"> <!-- Does not need to be just a "person", can be an alien as well!-->
+
 						<!-- Create 3 <td> elements to display name, job_title, and salary -->
-						<td ng-repeat = "x in name">{{x}}</td>
-						<td ng-repeat = "y in job_title">{{y}}</td>
-						<td ng-repeat = "z in salary">{{z}}</td>
+						<td>{{person.name}}</td>
+						<td>{{person.job_title}}</td>
+						<td>{{person.salary | currency}}</td>
 						</tr>
 						
-
-
 				</tbody>
 			</table>
 		</div>

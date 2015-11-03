@@ -4,9 +4,10 @@ var app = angular.module('sortApp', []);
 // Define a controller "mainController" for you application, 
 // making sure to pass in both the $scope and $http variables
 app.controller('sortCtrl', function($scope, $http){
+    $scope.sortType = 'name';
     $http.get('data/salaries.json').then(function(response){
-        $scope.data = response.
-        $scope.sortType = 'name';
+        $scope.data = response.data
+        
         console.log($scope.data)
     })
 })
